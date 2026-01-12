@@ -1,0 +1,33 @@
+export const ERROR_CODES = {
+  INVALID_CONFIG: 'INVALID_CONFIG',
+  AUTHENTICATION_FAILED: 'AUTH_FAILED',
+  AUTHORIZATION_FAILED: 'FORBIDDEN',
+  NOT_FOUND: 'NOT_FOUND',
+  VALIDATION_ERROR: 'VALIDATION_ERROR',
+  RATE_LIMIT_EXCEEDED: 'RATE_LIMIT',
+  SERVER_ERROR: 'SERVER_ERROR',
+  NETWORK_ERROR: 'NETWORK_ERROR',
+  TIMEOUT: 'TIMEOUT',
+  WEBSOCKET_ERROR: 'WEBSOCKET_ERROR',
+  PARSE_ERROR: 'PARSE_ERROR',
+  SECURITY_ERROR: 'SECURITY_ERROR',
+  ANALYZER_ERROR: 'ANALYZER_ERROR',
+  AI_GENERATION_ERROR: 'AI_GENERATION_ERROR',
+} as const;
+
+export const ERROR_MESSAGES: Record<string, string> = {
+  [ERROR_CODES.INVALID_CONFIG]: 'Invalid configuration provided',
+  [ERROR_CODES.AUTHENTICATION_FAILED]: 'Authentication failed. Check your API key',
+  [ERROR_CODES.AUTHORIZATION_FAILED]: 'Access denied. Insufficient permissions',
+  [ERROR_CODES.NOT_FOUND]: 'Resource not found',
+  [ERROR_CODES.VALIDATION_ERROR]: 'Request validation failed',
+  [ERROR_CODES.RATE_LIMIT_EXCEEDED]: 'Rate limit exceeded. Please retry later',
+  [ERROR_CODES.SERVER_ERROR]: 'Server error occurred',
+  [ERROR_CODES.NETWORK_ERROR]: 'Network connection failed',
+  [ERROR_CODES.TIMEOUT]: 'Request timed out',
+  [ERROR_CODES.WEBSOCKET_ERROR]: 'WebSocket connection error',
+  [ERROR_CODES.PARSE_ERROR]: 'Failed to parse response',
+  [ERROR_CODES.SECURITY_ERROR]: 'Security violation detected',
+  [ERROR_CODES.ANALYZER_ERROR]: 'Project analysis failed',
+  [ERROR_CODES.AI_GENERATION_ERROR]: 'AI workflow generation failed',
+};

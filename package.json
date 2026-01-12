@@ -1,0 +1,85 @@
+{
+  "name": "@neurana/sdk",
+  "version": "1.0.0",
+  "description": "Official Neurana SDK - AI Workflow Automation Platform",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "del-cli lib && tsc",
+    "test": "node --import tsx --test tests/unit/**/*.test.ts",
+    "test:watch": "node --import tsx --test --watch tests/unit/**/*.test.ts",
+    "test:integration": "RUN_INTEGRATION_TESTS=true node --import tsx --test tests/integration/**/*.test.ts",
+    "test:coverage": "c8 npm test",
+    "test:all": "npm test && npm run test:integration",
+    "lint": "eslint src tests",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run build && npm test"
+  },
+  "keywords": [
+    "neurana",
+    "workflow",
+    "automation",
+    "ai",
+    "sdk",
+    "api",
+    "serverless",
+    "orchestration",
+    "step-functions",
+    "aws",
+    "lambda",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "workflow-engine",
+    "workflow-automation",
+    "task-automation",
+    "process-automation",
+    "business-automation",
+    "etl",
+    "data-pipeline",
+    "webhooks",
+    "integrations",
+    "no-code",
+    "low-code",
+    "zapier-alternative",
+    "n8n-alternative",
+    "make-alternative"
+  ],
+  "author": "Neurana",
+  "license": "MIT",
+  "homepage": "https://neurana.io",
+  "bugs": {
+    "url": "https://github.com/neurana/sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurana/sdk.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "c8": "^9.0.0",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.6.0"
+  }
+}

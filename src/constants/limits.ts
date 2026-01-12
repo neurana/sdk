@@ -1,0 +1,30 @@
+export const SIZE_LIMITS = {
+  MAX_FILE_SIZE: 10 * 1024 * 1024,
+  MAX_CODE_SIZE: 5 * 1024 * 1024,
+  MAX_WORKFLOW_STEPS: 100,
+  MAX_MEMORY_CONTENT: 50_000,
+  MAX_SECRET_VALUE: 10_000,
+  MAX_QUERY_LENGTH: 5_000,
+} as const;
+
+export const PAGINATION = {
+  DEFAULT_LIMIT: 20,
+  MAX_LIMIT: 100,
+  DEFAULT_OFFSET: 0,
+} as const;
+
+export const RATE_LIMITS = {
+  REQUESTS_PER_MINUTE: 60,
+  AI_GENERATIONS_PER_HOUR: 20,
+  FILE_UPLOADS_PER_HOUR: 100,
+} as const;
+
+export const VALIDATION = {
+  MIN_API_KEY_LENGTH: 10,
+  MAX_API_KEY_LENGTH: 256,
+  API_KEY_PATTERN: /^nrn_[A-Za-z0-9_-]+$/,
+  MAX_NAME_LENGTH: 100,
+  MAX_DESCRIPTION_LENGTH: 1000,
+  MAX_METADATA_SIZE: 4096,
+  ALLOWED_FILE_EXTENSIONS: ['.ts', '.js', '.json', '.yaml', '.yml', '.py', '.md'] as const,
+} as const;

@@ -1,0 +1,44 @@
+# Source files (compiled version in lib/)
+src/
+tests/
+coverage/
+
+# Development files
+*.ts
+!*.d.ts
+tsconfig.json
+tsconfig.test.json
+eslint.config.js
+.eslintrc*
+
+# Test files
+test-local.ts
+generate-test-token.ts
+*.test.ts
+*.spec.ts
+
+# Build artifacts
+*.tgz
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Environment
+.env*
+!.env.example
+
+# SST
+sst-env.d.ts
+.sst/
