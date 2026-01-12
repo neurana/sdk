@@ -129,7 +129,7 @@ describe("WorkflowsResource", () => {
             steps: [
               {
                 type: "code",
-                config: { code: 'print("test")' } as any,
+                config: { code: 'print("test")' } as Record<string, unknown>,
               },
             ],
           }),

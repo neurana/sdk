@@ -78,8 +78,8 @@ const neurana = new NeuranaClient({
   apiKey: 'your-api-key',
   
   // Optional: Custom endpoints
-  baseUrl: 'https://workflows.neurana.io',
-  mainApiUrl: 'https://api.neurana.io',
+  baseUrl: 'https://workflows.neurana.cloud',
+  mainApiUrl: 'https://api.neurana.cloud',
   
   // Optional: Request timeout (default: 30000ms)
   timeout: 30000,

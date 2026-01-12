@@ -23,7 +23,7 @@ describe('NeuranaClient', () => {
 
     it('throws with invalid API key type', () => {
       assert.throws(
-        () => new NeuranaClient({ apiKey: 123 as any }),
+        () => new NeuranaClient({ apiKey: 123 as unknown as string }),
         { message: /API key must be a string/ },
       );
     });
@@ -59,12 +59,12 @@ describe('NeuranaClient', () => {
       );
 
       assert.throws(
-        () => new NeuranaClient({ apiKey: null as any }),
+        () => new NeuranaClient({ apiKey: null as unknown as string }),
         { message: /API key is required/ },
       );
 
       assert.throws(
-        () => new NeuranaClient({ apiKey: undefined as any }),
+        () => new NeuranaClient({ apiKey: undefined as unknown as string }),
         { message: /API key is required/ },
       );
     });

@@ -1,7 +1,7 @@
 import { describe, it, beforeEach, afterEach } from 'node:test';
 import { strict as assert } from 'node:assert';
 import { HttpClient } from '../../src/http.js';
-import { MockServer, FIXTURES, assertRejects } from '../helpers/index.js';
+import { MockServer, FIXTURES } from '../helpers/index.js';
 import { AuthenticationError, NotFoundError, RateLimitError } from '../../src/errors.js';
 
 describe('HttpClient', () => {

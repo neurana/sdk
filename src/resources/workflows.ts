@@ -102,7 +102,7 @@ export class WorkflowsResource {
       throw new ValidationError('Update data is required');
     }
 
-    let processedData: Record<string, unknown> = { ...data };
+    const processedData: Record<string, unknown> = { ...data };
     if (data.steps && data.steps.length > 0) {
       processedData.steps = await this.processSteps(data.steps);
     }
@@ -164,7 +164,7 @@ export class WorkflowsResource {
           codeConfig.runtime === 'python' ? 'python' : 'javascript'
         );
 
-        const { code: _code, fileName: _fileName, ...restConfig } = codeConfig;
+        const { code: _unusedCode, fileName: _unusedFileName, ...restConfig } = codeConfig;
 
         processedSteps.push({
           type: step.type,

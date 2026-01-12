@@ -1,7 +1,7 @@
 export const API_VERSION = "v1";
 
-export const BASE_URL = "https://workflows.neurana.io";
-export const MAIN_API_URL = "https://api.neurana.io";
+export const BASE_URL = "https://workflows.neurana.cloud";
+export const MAIN_API_URL = "https://api.neurana.cloud";
 
 export const ENDPOINTS = {
   WORKFLOWS: {
